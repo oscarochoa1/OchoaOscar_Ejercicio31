@@ -1,0 +1,39 @@
+evolve_A.png: evolve_10.dat  evolve_20.dat evolve_30.dat evolve_40.dat  evolve_50.dat  evolve_60.dat  evolve_70.dat  evolve_80.dat  evolve_90.dat  evolve_100.dat plot.py
+
+evolve_10.dat : evolve.x
+	./evolve.x 10  > evolve_10.dat
+
+evolve_20.dat : evolve.x
+	./evolve.x 20  > evolve_20.dat
+
+evolve_30.dat : evolve.x
+	./evolve.x 30> evolve_30.dat
+
+evolve_40.dat : evolve.x
+	./evolve.x 40> evolve_40.dat
+
+evolve_50.dat : evolve.x
+	./evolve.x 50  > evolve_50.dat
+
+evolve_60.dat : evolve.x
+	./evolve.x 60 > evolve_60.dat
+
+evolve_70.dat : evolve.x
+	./evolve.x 70 > evolve_70.dat
+
+evolve_80.dat : evolve.x
+	./evolve.x 80 > evolve_80.dat
+    
+evolve_90.dat : evolve.x
+	./evolve.x 90> evolve_90.dat
+
+evolve_100.dat : evolve.x
+	./evolve.x 100 > evolve_100.dat
+
+evolve.x : evolve.cpp
+	c++ evolve.cpp -o evolve.x
+
+clean:
+	rm evolve.x *.dat
+    
+    
